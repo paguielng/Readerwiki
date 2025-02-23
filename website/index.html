@@ -1,38 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reader - Lecture Assistée par IA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .tabs {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    details {
+      background: #fff;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    summary {
+      padding: 15px;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      background: #007BFF;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .tab-contents-wrapper {
+      padding: 15px;
+    }
+    .tab-contents {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-form label {
+      margin-top: 10px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      margin-top: 15px;
+      padding: 10px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #0056b3;
+    }
+    .clickable-title {
+  cursor: pointer; /* Change le curseur en main */
+  color: #007BFF; /* Couleur de lien bleu */
+  text-decoration: underline; /* Souligne le texte */
+}
 
-<link rel="stylesheet" href="./style.css">
+.clickable-title:hover {
+  color: #0056b3; /* Changement de couleur au survol */
+}
+  </style>
+</head>
+<body>
 
-<h1>Reader Project - AI-Powered Reading Assistant</h1>
-  <div class="tabs">
+  <div onclick="window.location.href='https://github.com/paguielng/Reader'" style="cursor: pointer;">
+  <h1><strong>ReaderWiki - </strong></h1>
+</div>
+
    
-  <details name="tab" tabindex="1" open>
-    <summary>Features</summary>
-      
-    <div class="tab-contents-wrapper">
-      <div class="tab-contents">
-        <h2>Discover the Features of Reader</h2>
-        <p>An experimental Improved reading tool.
-         <ul>
-            <li>Uses <code>Linear Highlight</code> for perfect synchronization between voice reading and text highlighting.</li>
-            <li>Uses the <code>Multilingual Voice Reading;</code> to Support multiple languages ​​with natural voices.</li>
-            <li>Uses a <code>Voice Recognition</code> Dictation and real-time transcription.</li>
-            <li><strong>OCR</strong> : Extract text from images or scanned documents.</li>
-        </ul>
+    <!-- Section 1 : Fonctionnalités -->
+    <details name="tab" tabindex="1" open>
+      <summary>Fonctionnalités</summary>
+      <div class="tab-contents-wrapper">
+        <div class="tab-contents">
+          <h2>Découvrez les Fonctionnalités de Reader</h2>
+          <p>
+            Reader est un outil innovant conçu pour améliorer votre expérience de lecture grâce à l'intelligence artificielle.
+          </p>
+          <ul>
+            <li><strong>Surbrillance Linéaire</strong> : Synchronisation parfaite entre la lecture vocale et la surbrillance du texte.</li>
+            <li><strong>Lecture Vocale Multilingue</strong> : Support de plusieurs langues avec des voix naturelles.</li>
+            <li><strong>Reconnaissance Vocale</strong> : Dictée et transcription en temps réel.</li>
+            <li><strong>OCR</strong> : Extraction de texte à partir d'images ou de documents scannés.</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </details>
+    </details>
    
-  <details name="tab" tabindex="2">
-    <summary>About Us</summary>
-    
-    <div class="tab-contents-wrapper">
-      <div class="tab-contents">
-      
-      <div>
-  <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 200 200" style="display: inline-block; vertical-align: middle;">
+    <!-- Section 2 : À Propos -->
+    <details name="tab" tabindex="2">
+      <summary>À Propos</summary>
+      <div class="tab-contents-wrapper">
+        <div class="tab-contents">
+           <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 200 200" style="display: inline-block; vertical-align: middle;">
     <!-- Fond carré noir -->
     <path fill="#1F1F1F" d="M200 29.42C200 13.182 186.818 0 170.58 0H29.42C13.182 0 0 13.182 0 29.42v141.16C0 186.818 13.182 200 29.42 200h141.16c16.238 0 29.42-13.182 29.42-29.42V29.42z"/>
     
@@ -41,80 +128,59 @@
     <text x="38.3%" y="58.05%" font-size="120" font-family="Montserrat, sans-serif" font-weight="bold" fill="#FAFAFA" text-anchor="middle" dominant-baseline="middle">R</text>
     <text x="79.25%" y="85%" font-size="25" font-family="Montserrat, sans-serif" font-weight="bold" fill="#FAFAFA" text-anchor="middle" dominant-baseline="middle">1.0</text>
   </svg>
-  <h2 style="display: inline-block; vertical-align: middle; margin-left: 10px;">Reader Corp. LLC.</h2>
-</div>
-</svg>
-<p>
-  Reader is an innovative project developed by a team passionate about new technologies, solutions and artificial intelligence, dedicated to making reading accessible, intuitive and enjoyable for everyone. Our mission is to use the latest technological advances to help users better understand, remember and interact with the information they read, whether it is books, texts, documents or even images.
-</p>
-<p>
-  We firmly believe that reading should not be a challenge, but an enriching experience suitable for everyone. That's why we created Reader, an intelligent tool that adapts to your needs, your pace and your reading style. Whether you're a student, a professional, or simply an avid reader, Reader is designed to support you every step of the way.
-</p>
-<p>
-  With features like synchronized linear highlighting, multilingual voice reading, speech recognition for dictation, and extracting text from images, Reader pushes the boundaries of traditional reading. We integrate cutting-edge AI models to ensure a seamless, personalized experience that is accessible to everyone, including people with dyslexia or low vision.
-</p>
-<p>
-  Our vision is to democratize access to knowledge by making reading more interactive, more engaging and more effective. Join us in this project and discover how Reader can transform the way you read and learn.
-</p>
-      
-      </div>
-    </div>
-  </details>
-  
-  <details name="tab" tabindex="3">
-    <summary>Gallery</summary>
-    
-    <div class="tab-contents-wrapper">
-      <div class="tab-contents">
-        <h2>Features of our work</h2>
-        <div class="gallery">
-          <div>
-            <img src="https://production-media.paperswithcode.com/tasks/ocr_HwLumWs.png">
-            </div>
-          <div><img src="https://www.docuclipper.com/wp-content/uploads/what-is-ocr-Step-3_-Text-Recognition.png"></div>
-          <div><img src="https://dezyre.gumlet.io/images/blog/how-to-train-tesseract-ocr-python/image_911830634221668430103421.png?w=376&dpr=2.6"></div>
-          <div><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10032-019-00347-8/MediaObjects/10032_2019_347_Fig7_HTML.png"></div>
-            
-           <div><img src="https://www.docuclipper.com/wp-content/uploads/how-ocr-work.png"></div>
-            <div><img src="https://blog.bisok.com/hs-fs/hubfs/blog-images/ocr-for-handwriting.png?width=350&height=346&name=ocr-for-handwriting.png"></div>
-            <div><img src="https://i0.wp.com/www.linuxlinks.com/wp-content/uploads/2018/01/Screenshot-OCRFeeder.jpg?resize=600%2C422&ssl=1"></div>
+          <h2 style="display: inline-block; vertical-align: middle; margin-left: 10px;">Qui Sommes-Nous ?</h2>
+          <p>
+            Reader est un projet innovant développé par une équipe passionnée par les nouvelles technologies, les solutions et l'intelligence artificielle, dédiée à rendre la lecture accessible, intuitive et agréable pour tous. Notre mission est d'utiliser les dernières technologies d'IA pour aider les utilisateurs à mieux comprendre et retenir les informations.
+          </p>
+          <p>
+            Nous croyons que la lecture ne devrait pas être un défi, mais une expérience enrichissante. C'est pourquoi nous avons créé Reader, un outil qui s'adapte à vos besoins et à votre style de lecture.
+          </p>
         </div>
       </div>
-    </div>
-  </details>
+    </details>
   
-  <details name="tab"  tabindex="4">
-    <summary>Contact Us</summary>
-    
-    <div class="tab-contents-wrapper">
-      <div class="tab-contents">
-        <h2>How can you help us?</h2>
-        <form action="#" onsubmit="return false" method="POST" class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
-
-        <button type="submit" >Send Message</button>
-    </form>
+    <!-- Section 3 : Galerie -->
+    <details name="tab" tabindex="3">
+      <summary>Galerie</summary>
+      <div class="tab-contents-wrapper">
+        <div class="tab-contents">
+          <h2>Découvrez Reader en Images</h2>
+          <div class="gallery">
+            <div><img src="https://dezyre.gumlet.io/images/blog/how-to-train-tesseract-ocr-python/image_911830634221668430103421.png?w=376&dpr=2.6"></div>
+            <div><img src="https://www.docuclipper.com/wp-content/uploads/how-ocr-work.png" alt="Surbrillance du texte"></div>
+            <div><img src="https://production-media.paperswithcode.com/tasks/ocr_HwLumWs.png" alt="Reconnaissance vocale"></div>
+            <div><img src="https://i0.wp.com/www.linuxlinks.com/wp-content/uploads/2018/01/Screenshot-OCRFeeder.jpg?resize=600%2C422&ssl=1" alt="OCR"></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </details>
-  <details name="tab"  tabindex="5">
-     <summary onclick="window.location.href='https://github.com/paguielng/Reader'">GitHub</summary>
-  <div class="tab-contents-wrapper">
-    <div class="tab-contents">
-      <p>Redirecting to GitHub...</p>
-    </div>
-  </div>
-  </details>
+    </details>
   
-</div>
+    <!-- Section 4 : Contact -->
+    <details name="tab" tabindex="4">
+      <summary>Contact</summary>
+      <div class="tab-contents-wrapper">
+        <div class="tab-contents">
+          <h2>Contactez-Nous</h2>
+          <p>
+            Vous avez des questions ou des suggestions ? Nous serions ravis de vous entendre !
+          </p>
+          <form action="#" onsubmit="return false" method="POST" class="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
 
-</html>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </details>
   
- 
+  </div>
+
+</body>
+</html>
